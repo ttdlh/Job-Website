@@ -1,0 +1,97 @@
+<?
+  session_start();
+?>
+<nav class="navbar navbar-expand">
+  <div class="container">
+    <a class="navbar-brand" href="index.php">Jobs</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <a class="nav-link" href="index.php">Home</a>
+        <?
+        if(isset($_SESSION['username'])){
+          echo '<a class="nav-link" href="addjob.php">Add a Job</a>';
+          echo '<a class="nav-link" href="announcements.php">My Announcements</a>';
+        }else{
+          echo '<!-- Trigger the modal with a button -->
+                  <button class="btn nav-link" data-toggle="modal" data-target="#login">Login</button>
+                  <div id="login" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="text-right">Login</h4>
+                        </div>
+                        <div class="modal-body">
+                        <form action="php/login.php" method="POST">
+                          <div class="form-group row">
+                            <label class="form-control-label col-3">Username</label>
+                            <input class="form-control col-9" type="username" name="username" placeholder="Please enter your username here">
+                          </div>
+                          <div class="form-group row">
+                            <label class="form-control-label col-3">Password</label>
+                            <input class="form-control col-9" type="password" name="username" placeholder="Please enter your password here">
+                          </div>
+                          <div class="form-group row">
+                          <button class="btn btn-info offset-4 col-4 text-center type="submit" name="login"">Login</button>'# $Change colors$
+                          . '
+                          </div>
+                        </form><!-- form -->
+                        </div>
+                        <div class="modal-footer">
+                        <p class="float-right">you do not have an account?
+                        <a data-dismiss="modal" data-toggle="modal" data-target="#signup" href="#">Signup</a>
+                        </p>
+                        <button type="button" class="btn" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>';
+          echo   '<button class="btn nav-link" data-toggle="modal" data-target="#signup">Sing up</button>
+                    <div id="signup" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h4 class="text-right">Sign up</h4>
+                          </div>
+                          <div class="modal-body">
+                          <form action="php/signup.php" method="POST">
+                            <div class="form-group row">
+                              <label class="form-control-label col-3">Username</label>
+                              <input class="form-control col-9" type="username" name="username" placeholder="Please enter your username here">
+                            </div>
+                            <div class="form-group row">
+                              <label class="form-control-label col-3">Password</label>
+                              <input class="form-control col-9" type="password" name="username" placeholder="Please enter your password here">
+                            </div>
+                            <div class="form-group row">
+                              <label class="form-control-label col-3">Email</label>
+                              <input class="form-control col-9" type="email" name="email" placeholder="Please enter your email here">
+                            </div>
+                            <div class="form-group row">
+                              <label class="form-control-label col-3">Phone</label>
+                              <input class="form-control col-9" type="tel" name="tel" placeholder="Please enter your telephone number here">
+                            </div>
+                            <div class="form-group row">
+                              <label class="form-control-label col-3">Address</label>
+                              <input class="form-control col-9" type="address" name="address" placeholder="Please enter your password here">
+                            </div>
+                            <div class="form-group row">
+                            <button class="btn btn-info offset-4 col-4 text-center" type="submit" name="signup">Sign up</button>'# $Change colors$
+                            . '
+                            </div>
+                          </form><!-- form -->
+                          </div>
+                          <div class="modal-footer">
+                          <p class="float-right">you already have an account?
+                          <a data-dismiss="modal" data-toggle="modal" data-target="#login" href="#">Login</a>
+                          </p>
+                          <button type="button" class="btn" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>';
+        }
+        ?>
+      </ul>
+    </div>
+  </div>
+</nav><!-- nav -->

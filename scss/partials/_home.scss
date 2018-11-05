@@ -1,0 +1,27 @@
+.home{
+  img{
+    width: 125px;
+    height: 75px;
+    float: left;
+    margin-right: 1rem;
+  }
+  section#sponsored{
+    margin-bottom: 1rem;
+    li{
+      background: $color-sponsored;
+      h5{
+        color: #000;
+      }
+      p{
+        sub{
+          color: green;
+        }
+      }
+    }
+  }
+  section#jobs{
+    li{
+      background: #F6F6F6;
+    }
+  }
+}
