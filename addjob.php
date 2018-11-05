@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html><!-- not done -->
 <html>
 <head>
   <meta charset="utf-8">
@@ -13,15 +13,8 @@
   ?>
   <div class="addjob">
     <div class="container">
-      <form action="php/login.php" method="">
-        <div class="form-group row">
-          <label class="form-control-label col-3">Username</label>
-          <input class="form-control col-9" type="username" name="username" placeholder="Please enter your username here">
-        </div>
-        <div class="form-group row">
-          <label class="form-control-label col-3">Password</label>
-          <input class="form-control col-9" type="password" name="username" placeholder="Please enter your username here">
-        </div>
+      <form action="php/addjob.php" method="">
+
       </form><!-- form -->
     </div><!-- .container -->
   </div><!-- .login -->
