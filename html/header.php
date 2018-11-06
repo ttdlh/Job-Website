@@ -1,5 +1,6 @@
 <?
-  session_start();
+  if (session_status() == PHP_SESSION_NONE)
+    session_start();
 ?>
 <nav class="navbar navbar-expand">
   <div class="container">
@@ -11,9 +12,9 @@
         if(isset($_SESSION['username'])){
           echo '<a class="nav-link" href="addjob.php">Add a Job</a>';
           echo '<a class="nav-link" href="announcements.php">My Announcements</a>';
+          echo '<a class="nav-link" data-target="#signup" href="php/logout.php">Log out</a>';
         }else{
-          echo '<!-- Trigger the modal with a button -->
-                  <button class="btn nav-link" data-toggle="modal" data-target="#login">Login</button>
+          echo '<a class="nav-link" data-toggle="modal" data-target="#login" href="#">Login</a>
                   <div id="login" class="modal fade" role="dialog">
                     <div class="modal-dialog">
                       <div class="modal-content">
@@ -28,11 +29,10 @@
                           </div>
                           <div class="form-group row">
                             <label class="form-control-label col-3">Password</label>
-                            <input class="form-control col-9" type="password" name="username" placeholder="Please enter your password here">
+                            <input class="form-control col-9" type="password" name="password" placeholder="Please enter your password here">
                           </div>
                           <div class="form-group row">
-                          <button class="btn btn-info offset-4 col-4 text-center type="submit" name="login"">Login</button>'# $Change colors$
-                          . '
+                          <button class="btn btn-info offset-4 col-4 text-center type="submit" name="login"">Login</button>
                           </div>
                         </form><!-- form -->
                         </div>
@@ -45,7 +45,7 @@
                       </div>
                     </div>
                   </div>';
-          echo   '<button class="btn nav-link" data-toggle="modal" data-target="#signup">Sing up</button>
+                  echo   '<a class="nav-link" data-toggle="modal" data-target="#signup" href="#">Sing up</a>
                     <div id="signup" class="modal fade" role="dialog">
                       <div class="modal-dialog">
                         <div class="modal-content">
@@ -60,7 +60,7 @@
                             </div>
                             <div class="form-group row">
                               <label class="form-control-label col-3">Password</label>
-                              <input class="form-control col-9" type="password" name="username" placeholder="Please enter your password here">
+                              <input class="form-control col-9" type="password" name="password" placeholder="Please enter your password here">
                             </div>
                             <div class="form-group row">
                               <label class="form-control-label col-3">Email</label>
@@ -75,8 +75,7 @@
                               <input class="form-control col-9" type="address" name="address" placeholder="Please enter your password here">
                             </div>
                             <div class="form-group row">
-                            <button class="btn btn-info offset-4 col-4 text-center" type="submit" name="signup">Sign up</button>'# $Change colors$
-                            . '
+                            <button class="btn btn-info offset-4 col-4 text-center" type="submit" name="signup">Sign up</button>
                             </div>
                           </form><!-- form -->
                           </div>
@@ -89,7 +88,7 @@
                         </div>
                       </div>
                     </div>';
-        }
+                  }
         ?>
       </ul>
     </div>

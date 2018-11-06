@@ -7,7 +7,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="home">
 <?
 require_once("html/header.php");
 ?>
@@ -17,8 +17,9 @@ require_once("html/header.php");
   <div class="container">
     <ul class="list-group">
       <?
-        #List the top 6 sponsored jobs
-        $query= "select * from job_offer where type = 1";
+        #List sponsored jobs
+        $query= "select * from job_offer where type = 1 order by post_date desc";
+        $adv= 1;
         require("php/list_jobs.php");
       ?>
     </ul>

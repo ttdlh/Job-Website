@@ -31,4 +31,7 @@ nav {
 .home section#jobs li {
   background: #F6F6F6; }
 
+textarea {
+  height: 180px; }
+
 /*# sourceMappingURL=style.css.map */
