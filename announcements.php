@@ -7,7 +7,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="home">
   <?
     session_start();
     if(!(isset($_SESSION['username']))){
@@ -21,7 +21,7 @@
       <ul class="list-group">
         <?
           #List the jobs
-          $query= 'select * from job_offer where username="' . $_SESSION['username'] . '" order by post_date desc';
+          $query= 'select * from job_offer where username="' . $_SESSION['username'] . '" order by post_date desc'  ;
           $adv=0;//not Advertised
           require("php/list_jobs.php");
         ?>

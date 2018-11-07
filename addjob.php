@@ -58,21 +58,29 @@
           <textarea class="form-control col-9 desc" type="text" name="description" placeholder="Enter the Description here"></textarea>
         </div>
         <div class="form-group row">
-          <label class="form-control-label col-3"></label>
-          <input class="form-control col-9" type="" name="" placeholder="Enter the $ here">
+          <label class="form-control-label col-3">Job Requirements</label>
+          <textarea class="form-control col-9" type="text" name="requirements" placeholder="Enter the Job Requirements here"></textarea>
         </div>
         <div class="form-group row">
-          <label class="form-control-label col-3"></label>
-          <input class="form-control col-9" type="" name="" placeholder="Enter the $ here">
+          <label class="form-control-label col-3">Contact Info</label>
+          <input class="form-control col-9" type="text" name="contact" placeholder="Enter the Contact Information here">
         </div>
         <div class="form-group row">
+          <label class="form-control-label col-3">Advertise?</label>
+          <div class="fourm-group col-4 row">
+            <input class="form-control col-2" id="notsponsored" type="radio" name="category" value="0"><!-- Not sponsored -->
+            <label class="form0control-label col-10" for"notsponsored">No</lablel>
+          </div>
+          <div class="fourm-group col-4 row">
+            <input class="form-control col-2" id="sponsored" type="radio" name="category" value="1"><!-- Sponsored -->
+            <label class="form-control-label col-10" for"sponsored">Yes</lablel>
+          </div>
+        </div>
+        <!-- PLACE IMAGE Entry here -->
+        <!--<div class="form-group row">
           <label class="form-control-label col-3"></label>
           <input class="form-control col-9" type="" name="" placeholder="Enter the $ here">
-        </div>
-        <div class="form-group row">
-          <label class="form-control-label col-3"></label>
-          <input class="form-control col-9" type="" name="" placeholder="Enter the $ here">
-        </div>
+        </div> -->
       </form><!-- form -->
     </div><!-- .container -->
   </div><!-- .login -->
