@@ -9,7 +9,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="addjob">
   <?
     session_start();
     if(!(isset($_SESSION['username']))){
