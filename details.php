@@ -31,11 +31,15 @@
           echo '<p>Company Name: ' . $row['company'] . '</p>';
           echo '<div class="boost">';
           echo '<p>Contact info: ' . $row['contact_info'] . '</p>';
-          #echo '<p>Company Address: ' . $row=['address'] . '</p>';
+          echo '<p>Company Address: ' . $row['address'] . '</p>';
           echo '<p>street: ' . $row['street'] . '</p>';
           echo '<p>Job Requirements: ' . $row['job_requirements'] . '</p>';
           echo '<p>Salary: $' . $row['salary'] . '</p>';
-
+          if($row['category'] == 0){
+            echo '<p>Job Category: Part time </p>';
+          }else{
+            echo '<p>Job Category: Full time </p>';
+          }
           echo '<date class="float-right">' . $row['post_date'] . '</date>';
           echo '</div>';
           echo "</li>";

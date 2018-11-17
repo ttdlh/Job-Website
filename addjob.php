@@ -1,5 +1,3 @@
-
-
 <!doctype html><!-- not done -->
 <html>
 <head>
@@ -21,7 +19,7 @@
 
   <div class="addjob">
     <div class="container">
-      <form action="php/addjob.php" method="">
+      <form action="php/addjob.php" method="POST">
         <div class="form-group row">
           <label class="form-control-label col-3">Job Title</label>
           <input class="form-control col-9" type="text" name="job_title" placeholder="Enter the job Title here">
@@ -81,6 +79,7 @@
           <label class="form-control-label col-3"></label>
           <input class="form-control col-9" type="" name="" placeholder="Enter the $ here">
         </div> -->
+          <button class="btn btn-primary btn-block" type="submit" name="add">ADD JOB</button>
       </form><!-- form -->
     </div><!-- .container -->
   </div><!-- .login -->

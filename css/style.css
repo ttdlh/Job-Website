@@ -3,6 +3,8 @@
 
 .addjob {
   background: #EDEDED; }
+  .addjob button {
+    margin-bottom: 1rem; }
 
 nav {
   background: #ff6600;

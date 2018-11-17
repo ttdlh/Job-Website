@@ -14,7 +14,7 @@
       $_SESSION['username']= $row['username'];
       header('Location: ../index.php');
     }else{
-      echo"wrong";
+      echo"wrong password";
     }
   }else{
     echo "Error";

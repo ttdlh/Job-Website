@@ -4,5 +4,9 @@
     header('Location: index.php');
   }
 
-  if
+  if(isset($_POST['add'])){
+    require_once("database_connection");
+    #-
+    $query= 'insert into job_offer(job_title, company, category, address) VALUES()';
+  }
 ?>
