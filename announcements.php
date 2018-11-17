@@ -8,7 +8,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="home">
-  <?
+  <?php
     session_start();
     if(!(isset($_SESSION['username']))){
       header('Location: index.php');
@@ -19,7 +19,7 @@
   <section id="myannouncements">
     <div class="container">
       <ul class="list-group">
-        <?
+        <?php
           #List the jobs
           $query= 'select * from job_offer where username="' . $_SESSION['username'] . '" order by post_date desc'  ;
           $adv=0;//not Advertised

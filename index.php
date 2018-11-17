@@ -8,7 +8,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="home">
-  <?
+  <?php
   require_once("html/nav.php");
   ?>
 
@@ -17,7 +17,7 @@
     <div class="container">
       <h5 class="text-center"><a href="sponsored.php">Sponsored</a></h5>
       <ul class="list-group">
-        <?
+        <?php
           #List the top 6 sponsored jobs
           $query= "select * from job_offer where type = 1 order by post_date desc limit 6 ";
           $adv=1;//Advertised
@@ -30,7 +30,7 @@
   <section id="jobs">
     <div class="container">
       <ul class="list-group">
-        <?
+        <?php
           #List the jobs
           $query= "select * from job_offer order by post_date desc";
           $adv=0;//not Advertised

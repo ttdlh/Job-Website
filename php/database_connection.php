@@ -1,4 +1,4 @@
-<?php
+<?phpphp
   //Establish database connection
   DEFINE('DB_USER', 'root');
   DEFINE('DB_PASSWORD', '');

@@ -8,7 +8,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="addjob">
-  <?
+  <?php
     session_start();
     if(!(isset($_SESSION['username']))){
       header('Location: index.php');

@@ -1,4 +1,4 @@
-<?
+<?php
   if (session_status() == PHP_SESSION_NONE)
     session_start();
 ?>
@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">
         <a class="nav-link" href="index.php">Home</a>
-        <?
+        <?php
         if(isset($_SESSION['username'])){
           echo '<a class="nav-link" href="addjob.php">Add a Job</a>';
           echo '<a class="nav-link" href="announcements.php">My Announcements</a>';

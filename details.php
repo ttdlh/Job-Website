@@ -9,12 +9,12 @@
 </head>
 <body class="home">
 
-  <?
+  <?php
   require_once("html/nav.php");
   ?>
   <div class="container">
     <ul class="list-group">
-      <?require_once("php/database_connection.php");
+      <?phprequire_once("php/database_connection.php");
 
       if(isset($_GET['id'])){
         $query= 'select * from job_offer where id="' . $_GET['id'] . '"';

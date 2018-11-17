@@ -1,4 +1,4 @@
-<?
+<?php
   require_once("database_connection.php");
   //select * from job_offer where type = sponsored
   $response= mysqli_query($dbc, $query);

@@ -8,7 +8,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="home">
-<?
+<?php
 require_once("html/nav.php");
 ?>
 
@@ -16,7 +16,7 @@ require_once("html/nav.php");
 <section id="sponsored">
   <div class="container">
     <ul class="list-group">
-      <?
+      <?php
         #List sponsored jobs
         $query= "select * from job_offer where type = 1 order by post_date desc";
         $adv= 1;
