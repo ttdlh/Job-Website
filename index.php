@@ -6,8 +6,17 @@
   <!-- css -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+
+  <script>
+    function wrongCred(){
+      var wrongCredintials=<?php echo $_POST['invalidCredentials'];?>;
+      if(wrongCredintials){
+        $('#login').modal('show');
+      }
+    }
+  </script>
 </head>
-<body class="home">
+<body onload="wrongCred()" class="home">
   <?php
   require_once("html/nav.php");
   ?>
