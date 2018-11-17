@@ -9,7 +9,7 @@
 </head>
 <body class="home">
   <?
-    require_once("html/header.php");
+  require_once("html/nav.php");
   ?>
 
 

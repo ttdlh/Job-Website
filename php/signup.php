@@ -8,35 +8,35 @@
   if(isset($_POST['signup'])){
     require_once('database_connection.php');
 
-    $query="select username from users";
+    $query='select username from users where username ="' . $_POST['username'] . '"';
     $response= mysqli_query($dbc, $query);
-    if(!(mysqli_fetch_array($response))){
-      if($_POST['username'] != ''){
-        if($_POST['password'] != ''){
-          if($_POST['cpassword'] != ''){
-            if($_POST['email'] != ''){
-              if(isset($_POST['phone'])){
-                if($_POST['address'] != ''){
+    if(!(mysqli_num_rows($response))){#1
+      if($_POST['username'] != ''){#2
+        if($_POST['password'] != ''){#3
+          if($_POST['cpassword'] != ''){#4
+            if($_POST['email'] != ''){#5
+              if(isset($_POST['phone'])){#6
+                if($_POST['address'] != ''){#7
                   echo 'success';
-                }else{
+                }else{#7
                   echo '<p>Please enter your address</p>';
                 }
-              }else{
+              }else{#6
                 echo '<p>Please enter your phone number</p>';
               }
-            }else{
+            }else{#5
               echo '<p>Please enter your email</p>';
             }
-          }else{
+          }else{#4
             echo '<p>Please confirm the password</p>';
           }
-        }else{
+        }else{#3
           echo '<p>Please enter a password</p>';
         }
-      }else{
+      }else{#2
         echo '<p>Please enter a username</p>';
       }
-    }else{
+    }else{#1
       echo 'user already exist';
     }
   }

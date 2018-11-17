@@ -14,7 +14,7 @@
       header('Location: index.php');
     }
 
-    require_once("html/header.php");
+    require_once("html/nav.php");
   ?>
   <section id="myannouncements">
     <div class="container">
