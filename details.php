@@ -32,9 +32,6 @@
   require_once("html/nav.php");
   ?>
   <div class="container">
-    <p>
-      Hello <?php echo $GLOBALS['user_ip']; ?>
-    </p>
     <ul class="list-group">
       <?php
       require_once("php/database_connection.php");
