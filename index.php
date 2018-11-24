@@ -7,16 +7,8 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 
-  <script>
-    function wrongCred(){
-      var wrongCredintials=<?php echo $_POST['invalidCredentials'];?>;
-      if(wrongCredintials){
-        $('#login').modal('show');
-      }
-    }
-  </script>
 </head>
-<body onload="wrongCred()" class="home">
+<body class="home">
   <?php
   require_once("html/nav.php");
   ?>
@@ -54,5 +46,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="js/tether.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
