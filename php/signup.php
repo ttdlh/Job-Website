@@ -15,7 +15,7 @@
         if($_POST['password'] != ''){#3
           if($_POST['cpassword'] != ''){#4
             if($_POST['email'] != ''){#5
-              if(isset($_POST['phone'])){#6
+              if(isset($_POST['tel'])){#6
                 if($_POST['address'] != ''){#7
                   echo 'success';
                 }else{#7

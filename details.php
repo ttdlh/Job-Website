@@ -14,7 +14,8 @@
   ?>
   <div class="container">
     <ul class="list-group">
-      <?phprequire_once("php/database_connection.php");
+      <?php
+      require_once("php/database_connection.php");
 
       if(isset($_GET['id'])){
         $query= 'select * from job_offer where id="' . $_GET['id'] . '"';
