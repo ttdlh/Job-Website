@@ -23,11 +23,12 @@
           #List the jobs
           $query= 'select * from job_offer where username="' . $_SESSION['username'] . '" order by post_date desc'  ;
           $adv=0;//not Advertised
+          $my= 1;
           require("php/list_jobs.php");
         ?>
       </ul>
     </div>
-  </section>
+  </section><!-- section#myannouncements -->
   <!-- Javascript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>

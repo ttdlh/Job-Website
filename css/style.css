@@ -42,4 +42,7 @@ nav {
 textarea {
   height: 180px; }
 
+section#myannouncements .btn {
+  margin: 0px 4px; }
+
 /*# sourceMappingURL=style.css.map */

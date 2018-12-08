@@ -22,6 +22,7 @@
           #List the top 6 sponsored jobs
           $query= "select * from job_offer where type = 1 order by post_date desc limit 6 ";
           $adv=1;//Advertised
+          $my=0;
           require("php/list_jobs.php");
         ?>
       </ul>

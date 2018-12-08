@@ -1,4 +1,5 @@
 <?php
+  $_POST['loginError']= 0;
   if($_SERVER["REQUEST_METHOD"] == "POST"){
     if((isset($_SESSION['username']))){
       header('Location: index.php');
@@ -24,10 +25,9 @@
       }else{
         $loginERR= "Please enter your username";
       }
-      $_POST['loginERR']= true;
+      $_POST['loginError']= 1;
     }
   }
-
 ?>
 <div id="login" class="modal fade" role="dialog">
   <div class="modal-dialog">
@@ -37,7 +37,7 @@
       </div>
       <div class="modal-body">
       <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST">
-        <div class="form-group row" id="loginerr" style="display: none;">
+        <div class="form-group row" id="loginerr" style="display: none; color: red;">
           <label class="form-control-label col-12 text-center"><?php echo $loginERR; ?></label>
         </div>
         <div class="form-group row">
@@ -62,4 +62,4 @@
     </div>
   </div>
 </div>
-<script>var loginerr=<?php echo $_POST['loginERR'];?>;</script><!-- login wrong crids-->
+<script> var loginerror=<?php echo $_POST['loginError'];?>;</script><!-- login error-->

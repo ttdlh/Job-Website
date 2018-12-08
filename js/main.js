@@ -1,8 +1,7 @@
-if(loginerr){
+if(loginerror){
   $('#login').modal('show');
   document.getElementById("loginerr").style.display= "inline";
-}
-if(signuperr){
+}else if(signuperror){
   $('#signup').modal('show');
   document.getElementById("signuperr").style.display= "inline";
 }
