@@ -1,8 +1,8 @@
 <?php
 
 
-  if((isset($_SESSION['username']))){
-    header('Location: index.php');
+  if(isset($_SESSION['username'])){
+    //header('Location: index.php');
   }
   $_POST['signupError']= 0;
   $reguser= '';
@@ -92,7 +92,7 @@
         </div>
         <div class="form-group row">
           <label class="form-control-label col-3">Address</label>
-          <input class="form-control col-9" type="address" name="address" placeholder="Please enter your password here" value=<?php echo $regaddress; ?>>
+          <input class="form-control col-9" type="address" name="address" placeholder="Please enter your address here" value=<?php echo $regaddress; ?>>
         </div>
         <div class="form-group row">
         <button class="btn btn-info offset-4 col-4 text-center" type="submit" name="signup">Sign up</button>

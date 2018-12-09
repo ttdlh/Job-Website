@@ -10,11 +10,22 @@
       if($_POST['username'] != ""){
         if($_POST['password']){
           require_once('php/database_connection.php');
+
+          //user
           $query= 'select * from users where username="' . $_POST['username'] . '"';
           $response= mysqli_query($dbc, $query);
           $row= mysqli_fetch_array($response);
           if($row['password'] == $_POST['password']){
             $_SESSION['username']= $row['username'];
+            header('Location: index.php');
+          }
+
+          //admin
+          $query= 'select * from admins where username="' . $_POST['username'] . '"';
+          $response= mysqli_query($dbc, $query);
+          $row= mysqli_fetch_array($response);
+          if($row['password'] == $_POST['password']){
+            $_SESSION['admin']= $row['username'];
             header('Location: index.php');
           }else{
             $loginERR= "the username and password do not match";
